@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,700;0,900;1,400&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    background-color: green;
+    background: linear-gradient(289.6deg, #0C0C0C 0%, #2C4550 98.22%);
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* Typgraphy */
+
+h1, h2, p, li, .logo-text {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+.logo-text {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+p {
+    line-height: 1.3em;
+}
+
+
+/* Hamburger */
+
+.hamburger {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hamburger-layers {
+    display: flex;
+    justify-content: flex-end;
+
+    width: 30px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.hamburger-layers::after,
+.hamburger-layers::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburger.open .hamburger-layers {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.hamburger.open .hamburger-layers::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.hamburger.open .hamburger-layers::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.hamburger-layers::before {
+    transform: translateY(-16px);
+}
+
+.hamburger-layers::after {
+    transform: translateY(16px);
+}
+
+
+/* Layout */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 30px;
+}
+
+.nav-links {
+    display: none;
+}
+
+.article {
+    background-image: url(images/steps.png);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: center left;
+    padding-bottom: 40px;
+}
+
+.article img {
+    display: flex;
+    margin: 0 auto;
+}
+
+.article-section {
+    margin: 0 2em 100px;
+}
+
+.article-section p {
+    margin-top: 2em;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 60px 0 40px;
+    background: radial-gradient(100% 2631.09% at 0% 0%, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.558) 100%)
+}
+
+.section-box1 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0;
+}
+
+.section-box2 {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2em;
+    text-align: left;
+    padding: 0 20px;
+    margin: auto 0;
+}
+
+.section-box2 p {
+    margin-top: 20px;
+}
+
+.section-box3 {
+    display: none;
+}
+
+.tick-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.tick {
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.footer-icons,
+.hidden {
+    display: none;
+}
+
+.section-box2-title {
+    padding-right: 0.5em;
+    display: block;
+}
+
+.footer-logo {
+    display: none;
+}
+
+@media(min-width: 1250px) {
+
+    .body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container {
+        width: 90%;
+    }
+    
+    .main {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: row;
+        height: 80%;
+    }
+
+
+    .section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        height: 250px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .section-box1 {
+        display: flex;
+        width: auto;
+        padding: 20px;
+        margin: 0px;
+    }
+
+    .section-box1 img {
+        max-height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .hidden {
+        display: inline;
+    }
+
+    .section-box2 {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+    }
+
+    .section-box2 p {
+        padding-right: 45px;
+    }
+
+    .tick-box img {
+        width: 50px;
+    }
+
+    .section-box3 {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .section-box3 h2 {
+        margin-bottom: 2em;
+    }
+
+    .section-box3 p {
+        display: block;
+        margin-right: 50px;
+    }
+
+    .hamburger, 
+    .hamburger-layers {
+        display: none;
+    }
+
+    .nav-links {
+        display: block;
+        color: white;
+        display: flex;
+        list-style-type: none;
+        padding: 0px;
+        margin-right: 40px;
+    }
+
+    .nav-links li {
+        padding-left: 40px;
+        font-size: 1.4rem;
+        margin: auto 0;
+        font-weight: bolder;
+    }
+
+    #current-page {
+        border-bottom: 3px solid #fff;
+        padding-left: 0px;
+    }
+
+    .footer-icons {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    .footer-icons li {
+        display: block;
+        margin-top: 30px;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer {
+        width: 10%;
+        order: -1;
+        border-right: 3px solid #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-logo {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .article-section {
+        order: -1;
+        width: 450px;
+        margin-top: 200px;
+    }
+
+    .article {
+        background-image: url(images/steps.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        margin: 0px;
+        padding: 0px;
+    }
+}
